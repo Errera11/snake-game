@@ -1,10 +1,12 @@
-export const boardOptions = {
-    height: 600,
-    width: 800
+
+
+export const gridOptions = {
+    gridRows: 25,
+    gridColumns: 30
 }
 
 // The more value the slower snake speed
-export const gameSpeed = 1000;
+export const gameSpeed = 100;
 
 export const snakeDir = {
     UP: 'w',

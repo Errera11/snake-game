@@ -12,6 +12,8 @@ body {
   grid-template-columns: repeat(30, 1fr);
   grid-template-rows: repeat(25, 1fr);
   background: seashell;
+  width: 70vw;
+  height: 60vh;
 }
 
 #snake {
