@@ -6,7 +6,7 @@ export const gridOptions = {
 }
 
 // The more value the slower snake speed
-export const gameSpeed = 100;
+export const gameSpeed = 200;
 
 export const snakeDir = {
     UP: 'w',

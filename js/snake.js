@@ -5,7 +5,12 @@ export class Snake {
         {x: Math.floor(Math.random() * gridOptions.gridRows), y: Math.floor(Math.random() * gridOptions.gridColumns)},
     ];
     _currentDirection = {x: 0, y: -1};
-
+    updateSnakePos() {
+        this._snakeParts = [{
+            x: Math.ceil(Math.random() * gridOptions.gridColumns),
+            y: Math.ceil(Math.random() * gridOptions.gridRows)
+        }]
+    }
     incrementSnakeParts() {
         this._snakeParts.push({...this._snakeParts[this.snakeSize - 1]});
     }
@@ -16,6 +21,14 @@ export class Snake {
 
     get snakeSize() {
         return this._snakeParts.length;
+    }
+
+    isSnakeIntersects() {
+        return this._snakeParts.some((part, index) => {
+            return index ? this._snakeParts[0].x === part.x &&
+                this._snakeParts[0].y === part.y
+                : false;
+        })
     }
 
     // Snake endless moving
